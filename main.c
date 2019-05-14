@@ -1,7 +1,7 @@
 /*
- * GccApplication2.c
+ * GccApplication8.c
  *
- * Created: 14-May-19 9:48:52 AM
+ * Created: 10-May-19 12:22:36 PM
  * Author : JAYASREE
  */ 
 #ifndef F_CPU
@@ -13,46 +13,82 @@
 
 int main(void)
 {
+    /* Replace with your application code */
 	DDRA=0XFF;
-	
-	  /* Replace with your application code */
-    while (1) 
+	DDRB=0X00;
+	 while (1) 
     {
-		PORTA=0XFD;
+		if((PINB &(1<<PB0))==0)
+		{
+		PORTA=1<<PA0;
 		_delay_ms(1000);
-		PORTA=0X61;
+		PORTA=0<<PA0;
 		_delay_ms(1000);
-		PORTA=0XDB;
+		PORTA=1<<PA1;
 		_delay_ms(1000);
-		PORTA=0XF3;
+		PORTA=0<<PA1;
 		_delay_ms(1000);
-		PORTA=0X67;
+		PORTA=1<<PA2;
 		_delay_ms(1000);
-		PORTA=0XB7;
+		PORTA=0<<PA2;
 		_delay_ms(1000);
-		PORTA=0XBF;
+		PORTA=1<<PA3;
 		_delay_ms(1000);
-		PORTA=0XE1;
+		PORTA=0<<PA3;
 		_delay_ms(1000);
-		PORTA=0XFF;
+		PORTA=1<<PA4;
 		_delay_ms(1000);
-		PORTA=0XF7;
+		PORTA=0<<PA4;
 		_delay_ms(1000);
-		PORTA=0XEF;
+		PORTA=1<<PA5;
 		_delay_ms(1000);
-		PORTA=0X3F;
+		PORTA=0<<PA5;
 		_delay_ms(1000);
-		PORTA=0X9D;
+		PORTA=1<<PA6;
 		_delay_ms(1000);
-		PORTA=0X7B;
+		PORTA=0<<PA6;
 		_delay_ms(1000);
-		PORTA=0XDF;
+		PORTA=1<<PA7;
 		_delay_ms(1000);
-		PORTA=0X8F;
+		PORTA=0<<PA7;
 		_delay_ms(1000);
-		PORTA=0XF7;
+		}
+		if((PINB &(1<<PB1))==0)
+		{
+		PORTA=1<<PA7;
 		_delay_ms(1000);
-		
-   }
+		PORTA=0<<PA7;
+		_delay_ms(1000);
+		PORTA=1<<PA6;
+		_delay_ms(1000);
+		PORTA=0<<PA6;
+		_delay_ms(1000);
+		PORTA=1<<PA5;
+		_delay_ms(1000);
+		PORTA=0<<PA5;
+		_delay_ms(1000);
+		PORTA=1<<PA4;
+		_delay_ms(1000);
+		PORTA=0<<PA4;
+		_delay_ms(1000);
+		PORTA=1<<PA3;
+		_delay_ms(1000);
+		PORTA=0<<PA3;
+		_delay_ms(1000);
+		PORTA=1<<PA2;
+		_delay_ms(1000);
+		PORTA=0<<PA2;
+		_delay_ms(1000);
+		PORTA=1<<PA1;
+		_delay_ms(1000);
+		PORTA=0<<PA1;
+		_delay_ms(1000);
+		PORTA=1<<PA0;
+		_delay_ms(1000);
+		PORTA=0<<PA0;
+		_delay_ms(1000);
+		}
+	
+    }
 }
 
